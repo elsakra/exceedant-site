@@ -1,20 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
 import Hero from '../components/Hero.astro';
 import Services from '../components/Services.astro';
-import Expertise from '../components/Expertise.astro';
-import About from '../components/About.astro';
+import Trust from '../components/Trust.astro';
+import Insights from '../components/Insights.astro';
 import CTA from '../components/CTA.astro';
 import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 ---
 
-<Layout title="Exceedant - Invisible Insights. Visible Results.">
-  <main>
+<Layout title="Exceedant - Business Consulting & Strategic Intelligence">
+  <main data-layout-pattern="editorial" data-card-style="elevated" data-button-style="ghost">
+    <Navigation />
     <Hero />
     <Services />
-    <About />
-    <Expertise />
+    <Trust />
+    <Insights />
     <CTA />
     <Footer />
   </main>
+  
+  <script src="../scripts/animations.ts"></script>
 </Layout>

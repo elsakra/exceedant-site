@@ -2,86 +2,71 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer id="contact" class="bg-neutral-900 text-white py-16 lg:py-20">
+<footer id="footer" class="bg-neutral-900 text-white pt-16 pb-8" data-module-key="footer" data-dominant-signal="headline">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
-      <!-- Logo & Description -->
-      <div class="lg:col-span-1">
-        <a href="/" class="inline-block mb-6">
-          <img 
-            src="https://res.cloudinary.com/dil14r8je/image/upload/v1768399474/auto-site-builder/Exceedant/image_0.png" 
-            alt="Exceedant Logo" 
-            class="h-8 w-auto"
-          />
-        </a>
-        <p class="text-white/60 text-sm leading-relaxed">
-          Delivering invisible insights to the world's most discerning financial leaders.
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <!-- Company -->
+      <div>
+        <img 
+          src="https://res.cloudinary.com/dil14r8je/image/upload/v1768399474/auto-site-builder/Exceedant/image_0.png" 
+          alt="Exceedant" 
+          class="h-8 w-auto mb-6 brightness-0 invert"
+        />
+        <p class="text-neutral-400 text-sm leading-relaxed">
+          Connecting people with information & insights to discover opportunities & risks invisible to others.
         </p>
-        <div class="flex gap-4 mt-6">
-          <a href="https://linkedin.com/company/exceedant" class="text-white/60 hover:text-white transition-colors">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-            </svg>
-          </a>
-        </div>
       </div>
       
       <!-- Services -->
       <div>
-        <h3 class="font-semibold text-white mb-4">Services</h3>
-        <ul class="space-y-3">
-          <li><a href="https://exceedant.com/services-and-products/" class="text-white/60 hover:text-white transition-colors text-sm">Services & Products</a></li>
-          <li><a href="https://exceedant.com/industries/" class="text-white/60 hover:text-white transition-colors text-sm">Industries</a></li>
-          <li><a href="https://exceedant.com/clients/" class="text-white/60 hover:text-white transition-colors text-sm">Clients</a></li>
-          <li><a href="https://exceedant.com/research_center/" class="text-white/60 hover:text-white transition-colors text-sm">Research Center</a></li>
+        <h3 class="font-medium mb-4">Services</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/services-and-products" class="text-neutral-400 hover:text-white transition-colors">Services & Products</a></li>
+          <li><a href="/industries" class="text-neutral-400 hover:text-white transition-colors">Industries</a></li>
+          <li><a href="/clients" class="text-neutral-400 hover:text-white transition-colors">Clients</a></li>
+          <li><a href="/research_center" class="text-neutral-400 hover:text-white transition-colors">Research Center</a></li>
         </ul>
       </div>
       
       <!-- Company -->
       <div>
-        <h3 class="font-semibold text-white mb-4">Company</h3>
-        <ul class="space-y-3">
-          <li><a href="https://exceedant.com/about-us/" class="text-white/60 hover:text-white transition-colors text-sm">About Us</a></li>
-          <li><a href="https://exceedant.com/news/" class="text-white/60 hover:text-white transition-colors text-sm">News and Insights</a></li>
-          <li><a href="https://exceedant.com/careers/" class="text-white/60 hover:text-white transition-colors text-sm">Careers</a></li>
-          <li><a href="https://exceedant.com/network" class="text-white/60 hover:text-white transition-colors text-sm">Network</a></li>
+        <h3 class="font-medium mb-4">Company</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/about-us" class="text-neutral-400 hover:text-white transition-colors">About Us</a></li>
+          <li><a href="/news" class="text-neutral-400 hover:text-white transition-colors">News and Insights</a></li>
+          <li><a href="/careers" class="text-neutral-400 hover:text-white transition-colors">Careers</a></li>
+          <li><a href="/network" class="text-neutral-400 hover:text-white transition-colors">Network</a></li>
         </ul>
       </div>
       
       <!-- Contact -->
       <div>
-        <h3 class="font-semibold text-white mb-4">Contact</h3>
-        <ul class="space-y-3">
-          <li>
-            <a href="tel:+18772243180" class="text-white/60 hover:text-white transition-colors text-sm">
-              Phone: 1.877.224.3180 EST USA
-            </a>
-          </li>
-          <li>
-            <a href="https://exceedant.com/contact/" class="text-white/60 hover:text-white transition-colors text-sm">
-              Contact Form
-            </a>
-          </li>
-          <li>
-            <a href="https://exceedant.com/request-for-proposal/" class="text-white/60 hover:text-white transition-colors text-sm">
-              Request for Proposal
+        <h3 class="font-medium mb-4">Contact</h3>
+        <ul class="space-y-2 text-sm">
+          <li class="text-neutral-400">Phone: <a href="tel:+18772243180" class="hover:text-white transition-colors">1.877-224-3180</a> EST USA</li>
+          <li><a href="/contact" class="text-neutral-400 hover:text-white transition-colors">Contact Form</a></li>
+          <li><a href="/request-for-proposal" class="text-neutral-400 hover:text-white transition-colors">Request for Proposal</a></li>
+          <li class="pt-2">
+            <a href="https://linkedin.com/company/exceedant" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
             </a>
           </li>
         </ul>
       </div>
     </div>
     
-    <!-- Bottom Bar -->
-    <div class="pt-8 border-t border-white/10">
+    <div class="border-t border-neutral-800 pt-8">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-white/40 text-sm">
-          Copyright © {currentYear} Exceedant. Powered by Exceedant.
+        <p class="text-sm text-neutral-400">
+          © {currentYear} Exceedant. All rights reserved.
         </p>
-        <div class="flex flex-wrap gap-4 text-sm">
-          <a href="https://exceedant.com/privacy-policy/" class="text-white/40 hover:text-white/60 transition-colors">Privacy Policy</a>
-          <a href="https://exceedant.com/terms-of-use/" class="text-white/40 hover:text-white/60 transition-colors">Terms of Use</a>
-          <a href="https://exceedant.com/cookie-policy/" class="text-white/40 hover:text-white/60 transition-colors">Cookie Policy</a>
-          <a href="https://exceedant.com/california-consumer-privacy-act-ccpa/" class="text-white/40 hover:text-white/60 transition-colors">CCPA</a>
+        <div class="flex gap-6 text-sm">
+          <a href="/privacy-policy" class="text-neutral-400 hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/terms-of-service" class="text-neutral-400 hover:text-white transition-colors">Terms of Service</a>
+          <a href="/cookie-policy" class="text-neutral-400 hover:text-white transition-colors">Cookie Policy</a>
         </div>
       </div>
     </div>

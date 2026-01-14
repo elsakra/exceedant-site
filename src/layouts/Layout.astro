@@ -4,7 +4,7 @@ export interface Props {
   description?: string;
 }
 
-const { title, description = 'Exceedant delivers invisible insights to the world\'s most discerning financial leaders through deep dive business consulting and investment investigation tools.' } = Astro.props;
+const { title, description = 'Exceedant connects people with information & insights. Discover opportunities & risks invisible to others with our business consulting services.' } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -16,21 +16,20 @@ const { title, description = 'Exceedant delivers invisible insights to the world
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- SEO -->
-    <title>{title}</title>
+    <!-- Open Graph / Social Media -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta property="og:image" content="https://res.cloudinary.com/dil14r8je/image/upload/v1768399474/auto-site-builder/Exceedant/image_4.jpg" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <title>{title}</title>
   </head>
-  <body>
+  <body class="bg-stone-50 text-neutral-900 antialiased">
     <slot />
   </body>
 </html>

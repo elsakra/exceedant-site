@@ -8,29 +8,23 @@
   }
   
   body {
-    @apply antialiased;
+    @apply font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
   }
 }
 
-@layer utilities {
-  .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  
-  .animate-on-scroll.animate-in {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .text-gradient {
-    @apply bg-gradient-to-r from-blue-900 via-slate-800 to-blue-900 bg-clip-text text-transparent;
-  }
-  
-  .glass-effect {
-    @apply backdrop-blur-xl bg-white/5 border border-white/10;
-  }
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -39,8 +33,49 @@
     transform: none;
     transition: none;
   }
-  
-  html {
-    scroll-behavior: auto;
-  }
+}
+
+/* Custom gradient text */
+.gradient-text {
+  background: linear-gradient(to right, #065f46, #064e3b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Subtle noise texture */
+.noise-texture {
+  position: relative;
+}
+
+.noise-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/1000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300;
+}
+
+.card-hover:hover {
+  @apply -translate-y-1 shadow-lg;
+}
+
+/* Button styles */
+[data-button-recipe="primary"] {
+  @apply border border-neutral-300 px-8 py-4 rounded-sm hover:border-neutral-900 transition-all duration-300 inline-flex items-center gap-2;
+}
+
+/* Container utilities */
+.container-padding {
+  @apply px-6 lg:px-8;
+}
+
+.section-padding {
+  @apply py-24 md:py-32;
 }
