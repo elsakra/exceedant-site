@@ -1,73 +1,139 @@
 ---
-const insights = [
-  {
-    title: "U.S. Real Estate Disruption",
-    description: "Regulation, investigation & litigation catalysts transforming the brokerage & portal industries.",
-    category: "Real Estate"
-  },
-  {
-    title: "Event-Driven Opportunities",
-    description: "Risks and opportunities stemming from U.S. Tariffs & related litigation impacts.",
-    category: "Trade & Policy"
-  },
-  {
-    title: "Healthcare Industry Impacts",
-    description: "Enterprise companies navigating litigation & investigations in the healthcare sector.",
-    category: "Healthcare"
-  },
-  {
-    title: "M&A Consolidation Trends",
-    description: "Global and U.S. M&A activity in brokerage, portal & adjacent industries.",
-    category: "M&A"
-  },
-  {
-    title: "AI Investment Risks",
-    description: "Evaluating increased risks due to AI investments & speculative returns.",
-    category: "Technology"
-  },
-  {
-    title: "Data Center Growth",
-    description: "Growth prospects and investment opportunities in data center infrastructure.",
-    category: "Infrastructure"
-  }
-];
 ---
 
-<section id="insights" class="py-24 md:py-32 bg-stone-900 text-white relative overflow-hidden">
-  <!-- Background texture -->
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(251,146,60,0.15),transparent_70%)]"></div>
-  
-  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-    <div class="text-center mb-16 animate-on-scroll">
-      <p class="text-amber-400 font-semibold uppercase tracking-wider text-sm mb-4">Research & Insights</p>
-      <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-        Areas of <span class="text-amber-400">Interest</span>
+<section id="insights" class="py-24 md:py-32 lg:py-40 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-light text-slate-900 tracking-tight mb-4">
+        Recent Areas of <span class="font-serif italic">Interest</span>
       </h2>
-      <p class="text-xl text-stone-300 max-w-3xl mx-auto">
-        Recent focus areas and emerging opportunities identified by our clients and research teams.
+      <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+        Examples of subject areas where our clients seek deep dive analysis and strategic insights.
       </p>
     </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {insights.map((insight, index) => (
-        <div 
-          class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 animate-on-scroll"
-          style={`animation-delay: ${index * 100}ms`}
-        >
-          <span class="inline-block px-3 py-1 bg-amber-400/20 text-amber-400 text-sm font-medium rounded-full mb-4">
-            {insight.category}
-          </span>
-          <h3 class="text-xl font-bold mb-3">{insight.title}</h3>
-          <p class="text-stone-400 leading-relaxed">{insight.description}</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Insight 1 -->
+      <article class="group animate-on-scroll">
+        <div class="relative overflow-hidden rounded-2xl mb-6">
+          <img 
+            src="https://res.cloudinary.com/dil14r8je/image/upload/v1768399476/auto-site-builder/Exceedant/image_8.jpg" 
+            alt="Real estate market analysis"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium text-slate-900">Real Estate</span>
         </div>
-      ))}
+        <h3 class="text-xl font-semibold text-slate-900 mb-3 group-hover:text-blue-900 transition-colors">
+          U.S. Real Estate Brokerage Disruption
+        </h3>
+        <p class="text-slate-600 leading-relaxed">
+          Analyzing catalysts for change including regulation, investigation, and litigation impacting brokerage and portal industries.
+        </p>
+      </article>
+      
+      <!-- Insight 2 -->
+      <article class="group animate-on-scroll">
+        <div class="relative overflow-hidden rounded-2xl mb-6">
+          <img 
+            src="https://res.cloudinary.com/dil14r8je/image/upload/v1768399485/auto-site-builder/Exceedant/image_10.jpg" 
+            alt="Global trade analysis"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium text-slate-900">Trade & Tariffs</span>
+        </div>
+        <h3 class="text-xl font-semibold text-slate-900 mb-3 group-hover:text-blue-900 transition-colors">
+          Event-Driven Opportunities from U.S. Tariffs
+        </h3>
+        <p class="text-slate-600 leading-relaxed">
+          Identifying risks and opportunities stemming from evolving U.S. trade policies and related litigation.
+        </p>
+      </article>
+      
+      <!-- Insight 3 -->
+      <article class="group animate-on-scroll">
+        <div class="relative overflow-hidden rounded-2xl mb-6">
+          <img 
+            src="https://res.cloudinary.com/dil14r8je/image/upload/v1768399475/auto-site-builder/Exceedant/image_5.jpg" 
+            alt="Financial technology innovation"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium text-slate-900">FinTech</span>
+        </div>
+        <h3 class="text-xl font-semibold text-slate-900 mb-3 group-hover:text-blue-900 transition-colors">
+          Digital Banking Transformation
+        </h3>
+        <p class="text-slate-600 leading-relaxed">
+          Examining the regulatory landscape and competitive dynamics reshaping traditional banking models.
+        </p>
+      </article>
+      
+      <!-- Insight 4 -->
+      <article class="group animate-on-scroll">
+        <div class="relative overflow-hidden rounded-2xl mb-6">
+          <img 
+            src="https://res.cloudinary.com/dil14r8je/image/upload/v1768399476/auto-site-builder/Exceedant/image_7.jpg" 
+            alt="Healthcare industry analysis"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium text-slate-900">Healthcare</span>
+        </div>
+        <h3 class="text-xl font-semibold text-slate-900 mb-3 group-hover:text-blue-900 transition-colors">
+          Healthcare M&A Consolidation
+        </h3>
+        <p class="text-slate-600 leading-relaxed">
+          Strategic analysis of merger activity, regulatory challenges, and market opportunities in healthcare.
+        </p>
+      </article>
+      
+      <!-- Insight 5 -->
+      <article class="group animate-on-scroll">
+        <div class="relative overflow-hidden rounded-2xl mb-6">
+          <img 
+            src="https://res.cloudinary.com/dil14r8je/image/upload/v1768399476/auto-site-builder/Exceedant/image_9.jpg" 
+            alt="Energy sector transformation"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium text-slate-900">Energy</span>
+        </div>
+        <h3 class="text-xl font-semibold text-slate-900 mb-3 group-hover:text-blue-900 transition-colors">
+          Energy Transition Investment
+        </h3>
+        <p class="text-slate-600 leading-relaxed">
+          Evaluating investment opportunities in renewable energy infrastructure and clean technology.
+        </p>
+      </article>
+      
+      <!-- Insight 6 -->
+      <article class="group animate-on-scroll">
+        <div class="relative overflow-hidden rounded-2xl mb-6">
+          <img 
+            src="https://res.cloudinary.com/dil14r8je/image/upload/v1768399475/auto-site-builder/Exceedant/image_6.jpg" 
+            alt="Supply chain optimization"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium text-slate-900">Supply Chain</span>
+        </div>
+        <h3 class="text-xl font-semibold text-slate-900 mb-3 group-hover:text-blue-900 transition-colors">
+          Global Supply Chain Resilience
+        </h3>
+        <p class="text-slate-600 leading-relaxed">
+          Assessing vulnerabilities and opportunities in post-pandemic supply chain restructuring.
+        </p>
+      </article>
     </div>
-
-    <div class="text-center mt-12 animate-on-scroll">
-      <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 bg-amber-500 text-stone-900 rounded-full font-semibold hover:bg-amber-400 hover:scale-105 transition-all duration-300 shadow-xl shadow-amber-500/25">
+    
+    <!-- CTA -->
+    <div class="text-center mt-16 animate-on-scroll">
+      <a href="https://exceedant.com/research_center/" class="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold bg-slate-900 text-white rounded-full hover:scale-105 hover:shadow-xl transition-all duration-300">
         Explore Research Center
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
         </svg>
       </a>
     </div>
