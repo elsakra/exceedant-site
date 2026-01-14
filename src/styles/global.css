@@ -5,59 +5,47 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  body {
-    @apply text-text-primary;
-  }
-  
-  ::selection {
-    @apply bg-brand-green text-white;
   }
 }
 
-@layer components {
-  .btn-primary {
-    @apply bg-brand-green text-white px-8 py-4 rounded-md font-medium transition-all duration-300 hover:bg-brand-green-dark hover:scale-105 focus:outline-none focus:ring-4 focus:ring-brand-green/20;
-  }
-  
-  .btn-secondary {
-    @apply bg-white text-brand-teal border border-border-light px-8 py-4 rounded-md font-medium transition-all duration-300 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200;
-  }
-  
-  .section-padding {
-    @apply py-20 md:py-28 lg:py-32;
-  }
-  
-  .container-padding {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-  
-  .card-hover {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
-  }
-  
-  .text-gradient {
-    @apply bg-gradient-to-r from-brand-teal to-brand-green bg-clip-text text-transparent;
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 
-@layer utilities {
-  .animate-delay-100 {
-    animation-delay: 100ms;
-  }
-  
-  .animate-delay-200 {
-    animation-delay: 200ms;
-  }
-  
-  .animate-delay-300 {
-    animation-delay: 300ms;
-  }
-  
-  .animate-delay-400 {
-    animation-delay: 400ms;
-  }
+/* Custom gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #f59e0b 0%, #dc2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Noise texture overlay */
+.noise-texture {
+  position: relative;
+}
+
+.noise-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  mix-blend-mode: overlay;
+  pointer-events: none;
 }
