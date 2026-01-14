@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply text-text-primary;
+  }
+  
+  ::selection {
+    @apply bg-brand-green text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-green text-white px-8 py-4 rounded-md font-medium transition-all duration-300 hover:bg-brand-green-dark hover:scale-105 focus:outline-none focus:ring-4 focus:ring-brand-green/20;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-brand-teal border border-border-light px-8 py-4 rounded-md font-medium transition-all duration-300 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-200;
+  }
+  
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+  
+  .container-padding {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-teal to-brand-green bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+}

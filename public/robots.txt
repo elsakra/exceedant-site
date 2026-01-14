@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://exceedant.com/sitemap.xml

@@ -1,0 +1,84 @@
+---
+const insights = [
+  {
+    number: "01",
+    title: "U.S. Real Estate Disruption",
+    description: "Disruption impacting the U.S. real estate brokerage & portal industries. The catalysts include regulation, investigation & litigation.",
+    image: "https://res.cloudinary.com/dil14r8je/image/upload/v1768399476/auto-site-builder/Exceedant/image_9.jpg"
+  },
+  {
+    number: "02",
+    title: "U.S. Tariffs & Litigation",
+    description: "Event-driven opportunities and risks stemming from U.S. Tariffs & related Litigation.",
+    image: "https://res.cloudinary.com/dil14r8je/image/upload/v1768399485/auto-site-builder/Exceedant/image_10.jpg"
+  },
+  {
+    number: "03",
+    title: "Healthcare Industry Impacts",
+    description: "The Impacts on Various Enterprise Companies in the Healthcare Industry Due to Litigation & Investigations.",
+    image: "https://res.cloudinary.com/dil14r8je/image/upload/v1768399476/auto-site-builder/Exceedant/image_8.jpg"
+  },
+  {
+    number: "04",
+    title: "Global M&A Activity",
+    description: "Global and U.S. M&A activity & consolidation in the brokerage, portal & adjacent industries.",
+    image: "https://res.cloudinary.com/dil14r8je/image/upload/v1768399474/auto-site-builder/Exceedant/image_2.jpg"
+  },
+  {
+    number: "05",
+    title: "AI Investment Risks",
+    description: "Increased global & U.S. Risks Due to a Plethora of AI Investments & Speculative Returns.",
+    image: "https://res.cloudinary.com/dil14r8je/image/upload/v1768399486/auto-site-builder/Exceedant/image_12.jpg"
+  },
+  {
+    number: "06",
+    title: "Data Center Growth",
+    description: "Growth prospects for data centers and adjacent investment opportunities as well as risks.",
+    image: "https://res.cloudinary.com/dil14r8je/image/upload/v1768399476/auto-site-builder/Exceedant/image_7.jpg"
+  }
+];
+---
+
+<section id="insights" class="section-padding bg-white">
+  <div class="container-padding">
+    <div class="text-center mb-16 animate-on-scroll">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-light text-brand-teal mb-4">
+        Recent Areas of <span class="font-medium">Client Interest</span>
+      </h2>
+      <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+        Stay ahead with our latest insights on market disruptions, regulatory changes, and emerging opportunities
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-grid">
+      {insights.map((insight) => (
+        <div class="stagger-item group cursor-pointer">
+          <div class="relative overflow-hidden rounded-xl mb-4">
+            <img 
+              src={insight.image} 
+              alt={insight.title}
+              class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute top-4 left-4 text-5xl font-light text-white/20">{insight.number}</div>
+          </div>
+          <h3 class="text-xl font-medium text-brand-teal mb-2 group-hover:text-brand-green transition-colors">
+            {insight.title}
+          </h3>
+          <p class="text-text-secondary leading-relaxed">
+            {insight.description}
+          </p>
+        </div>
+      ))}
+    </div>
+    
+    <div class="text-center mt-12">
+      <a href="#contact" class="text-brand-green hover:text-brand-green-dark font-medium inline-flex items-center gap-2 transition-colors">
+        Learn more about our research
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
