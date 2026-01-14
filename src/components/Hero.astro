@@ -1,34 +1,35 @@
 ---
+import '../styles/global.css';
 ---
 
-<section id="home" class="relative min-h-screen overflow-hidden">
-  <!-- Background Image with Overlay -->
-  <img 
-    src="https://res.cloudinary.com/dil14r8je/image/upload/v1768399474/auto-site-builder/Exceedant/image_4.jpg" 
-    alt="Professional team collaboration"
-    class="absolute inset-0 w-full h-full object-cover"
-  />
-  <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-blue-900/80 to-slate-800/70"></div>
+<section id="home" class="relative min-h-screen overflow-hidden bg-gradient-to-b from-stone-50 to-neutral-50">
+  <!-- Hero Background Image with Parallax -->
+  <div class="absolute inset-0 hero-parallax">
+    <img 
+      src="https://res.cloudinary.com/dil14r8je/image/upload/v1768399474/auto-site-builder/Exceedant/image_4.jpg" 
+      alt="Exceedant team collaboration"
+      class="w-full h-full object-cover opacity-90"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-neutral-900/80 via-neutral-900/60 to-neutral-900/40"></div>
+  </div>
   
   <!-- Navigation -->
-  <nav class="navbar relative z-20 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="flex items-center justify-between py-6">
+  <nav class="relative z-20 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto py-6">
+      <div class="flex items-center justify-between">
         <a href="/" class="flex items-center">
           <img 
-            src="https://res.cloudinary.com/dil14r8je/image/upload/v1768399486/auto-site-builder/Exceedant/image_11.png" 
-            alt="Exceedant" 
+            src="https://res.cloudinary.com/dil14r8je/image/upload/v1768399474/auto-site-builder/Exceedant/image_0.png" 
+            alt="Exceedant Logo" 
             class="h-10 w-auto"
           />
         </a>
-        
-        <div class="hidden lg:flex items-center gap-8">
-          <a href="#services" class="text-sm font-medium text-white/90 hover:text-white transition-colors duration-200">Services</a>
-          <a href="#insights" class="text-sm font-medium text-white/90 hover:text-white transition-colors duration-200">Insights</a>
-          <a href="#clients" class="text-sm font-medium text-white/90 hover:text-white transition-colors duration-200">Clients</a>
-          <a href="https://exceedant.com/about-us/" class="text-sm font-medium text-white/90 hover:text-white transition-colors duration-200">About</a>
-          <a href="#contact" class="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold bg-white/10 backdrop-blur-xl text-white rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
-            Request Consultation
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#services" class="text-white/90 hover:text-white transition-colors duration-300">Services</a>
+          <a href="#expertise" class="text-white/90 hover:text-white transition-colors duration-300">Expertise</a>
+          <a href="#contact" class="text-white/90 hover:text-white transition-colors duration-300">Contact</a>
+          <a href="https://exceedant.com/request-for-proposal/" class="inline-flex items-center px-6 py-2.5 backdrop-blur-xl bg-white/10 border border-white/20 rounded-full text-white font-medium hover:bg-white/20 transition-all duration-300">
+            Request Proposal
           </a>
         </div>
       </div>
@@ -36,27 +37,24 @@
   </nav>
   
   <!-- Hero Content -->
-  <div class="relative z-10 flex items-center min-h-screen">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-24">
-      <div class="max-w-4xl">
-        <h1 class="text-5xl md:text-7xl lg:text-8xl font-light text-white leading-[0.9] tracking-tight mb-6">
-          Insights invisible<br/>
-          <span class="font-serif italic">to others</span>
-        </h1>
-        <p class="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
-          We connect people with information & insights. Discover opportunities & risks through deep dive business consulting.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="https://exceedant.com/request-for-proposal/" class="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold bg-white text-slate-900 rounded-full hover:scale-105 hover:shadow-xl transition-all duration-300">
-            Request Consultation
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
-          <a href="#services" class="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold bg-transparent text-white rounded-full border-2 border-white/30 hover:bg-white/10 hover:border-white/50 transition-all duration-300">
-            Explore Services
-          </a>
-        </div>
+  <div class="relative z-10 flex items-center justify-center min-h-screen px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto text-center">
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-light text-white tracking-tight mb-6 animate-fade-up">
+        Invisible insights.<br/>Visible results.
+      </h1>
+      <p class="text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto mb-12 animate-fade-up" style="animation-delay: 0.2s">
+        We connect people with information & insights invisible to others
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style="animation-delay: 0.4s">
+        <a href="#services" class="inline-flex items-center px-8 py-4 text-lg font-medium bg-white text-neutral-900 rounded-full hover:bg-neutral-100 hover:scale-105 transition-all duration-300 shadow-lg">
+          Explore Our Services
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+        <a href="https://exceedant.com/contact/" class="inline-flex items-center px-8 py-4 text-lg font-medium backdrop-blur-xl bg-white/10 border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300">
+          Get Started Today
+        </a>
       </div>
     </div>
   </div>
@@ -69,8 +67,6 @@
   </div>
 </section>
 
-<style>
-  .navbar.scrolled {
-    @apply bg-slate-900/95 backdrop-blur-lg shadow-lg;
-  }
-</style>
+<script>
+  import '../scripts/animations.ts';
+</script>
